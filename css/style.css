@@ -26,6 +26,14 @@ body {
     color: #925e0f;
 }
 
+@media screen and (max-width: 600px) {
+    .credits {
+        flex-direction: column;
+        font-size: 20px;
+        gap: 1rem;
+    }
+}
+
 .content {
     display: flex;
     width: 100%;
@@ -35,18 +43,31 @@ body {
 }
 
 .logo {
-    width: 300px;
+    width: 250px;
     display: block;
     margin-inline: auto;
-    margin-block: 5rem 2rem;
+    margin-block: 2rem 2rem;
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        width: 200px;
+        margin-bottom: 0;
+    }
 }
 
 h1 {
-    line-height: 4rem;
     margin: 2rem 5rem;
 
     text-align: center;
     color: white;
-    font-size: 55px;
+    font-size: 45px;
     font-weight: 800;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+        margin: 2rem 2rem;
+    }
 }
