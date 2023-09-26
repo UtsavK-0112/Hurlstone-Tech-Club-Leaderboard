@@ -1,10 +1,14 @@
+// CONSTANTS
+
+const max_rank = 10;
+
 // DOCUMENT ELEMENTS
 const leaderboard_div = document.querySelector(".leaderboard");
 
-// SHEETS CONSTANTS
+// SHEETS VALUES
 const SHEET_ID = "1KJeXTxnx7_tO_tEq16EfAnXTgauHUAggwm5FqzPYczI";
 const SHEET_TITLE = "2023 Term 4 - Hurlstone Tech Club Leaderboard";
-const SHEET_RANGE = "A1:D3";
+const SHEET_RANGE = "A1:D10";
 
 const FULL_URL =
     "https://docs.google.com/spreadsheets/d/" +
@@ -45,19 +49,34 @@ async function getLeaderBoardUsers() {
     });
 
     // ADD RANKING TO USER OBJECTS
+    current_rank = 1;
     sorted_array.map((user, index) => {
-        user.rank = index + 1;
+        user.rank = current_rank;
+        next_user =
+            index + 1 == sorted_array.length ? null : sorted_array[index + 1];
+
+        if (next_user) {
+            if (next_user.points !== user.points) {
+                current_rank += 1;
+            }
+        }
     });
 
-    return users_array;
+    // ONLY GET THE TOP 5 USERS
+    top_five = sorted_array.filter((user) => {
+        return user.rank <= max_rank;
+    });
+
+    return top_five;
 }
 
 getLeaderBoardUsers().then((users) => {
     users.map((user) => {
-        user_element = document.createElement("p");
+        user_element = document.createElement("span");
+        user_element.classList.add("leaderboard__row");
 
         console.log(user);
-        user_element.textContent = `#${user.rank} ${user.firstName} ${user.lastName}, ${user.points}`;
+        user_element.innerHTML = `<p>#${user.rank}</p><p>${user.firstName} ${user.lastName}</p><p>${user.points}</p>`;
 
         leaderboard_div.appendChild(user_element);
     });
