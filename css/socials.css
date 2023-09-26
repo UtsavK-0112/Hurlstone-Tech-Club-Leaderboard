@@ -1,0 +1,25 @@
+.socials {
+    display: flex;
+    gap: 5rem;
+
+    margin-block: 4rem;
+}
+
+.socials div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.socials img {
+    width: 80px;
+}
+
+.socials p {
+    font-size: 24px;
+    font-family: "Caveat", cursive;
+    color: #925e0f;
+    text-align: center;
+}

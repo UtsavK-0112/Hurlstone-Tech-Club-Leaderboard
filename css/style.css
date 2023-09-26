@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=JetBrains+Mono:wght@400;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffcc00;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.credits {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    /* background-color: red; */
+    width: 100%;
+    padding: 2rem;
+
+    font-size: 24px;
+    font-family: "Caveat", cursive;
+    color: #925e0f;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 300px;
+    display: block;
+    margin-inline: auto;
+    margin-block: 5rem 2rem;
+}
+
+h1 {
+    line-height: 4rem;
+    margin: 2rem 5rem;
+
+    text-align: center;
+    color: white;
+    font-size: 55px;
+    font-weight: 800;
+}

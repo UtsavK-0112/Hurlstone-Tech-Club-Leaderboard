@@ -1,40 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap");
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #ffcc00;
-    font-family: "JetBrains Mono", monospace;
-}
-
-img {
-    width: 350px;
-    display: block;
-    margin-inline: auto;
-    margin-block: 5rem 2rem;
-}
-
-h1 {
-    line-height: 4rem;
-    margin: 2rem 2rem;
-
-    text-align: center;
-    color: white;
-    font-size: 55px;
-    font-weight: 800;
-}
-
 .leaderboard {
     display: flex;
     flex-direction: column;
     background-color: white;
-    margin: 1rem auto;
-    border-radius: 20px;
+    border-radius: 40px;
+    width: calc(100% - 2rem);
     max-width: 1400px;
+
+    margin-bottom: 2rem;
 }
 
 .leaderboard__header {
@@ -61,7 +33,11 @@ h1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-block: 1.5rem;
+    margin-block: 2rem;
+}
+
+.leaderboard__row:last-of-type {
+    margin-bottom: 3rem;
 }
 
 .leaderboard__row p {
@@ -70,4 +46,24 @@ h1 {
     font-size: 16px;
     color: black;
     display: inline;
+}
+
+.leaderboard__row .point {
+    font-weight: 800;
+    color: #5c4dc6;
+    display: inline;
+}
+
+.date {
+    position: relative;
+    top: -3.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 3rem;
+    width: 200px;
+    border-radius: 50px;
+    background-color: #5c4dc6;
+    color: white;
 }

@@ -1,9 +1,10 @@
 // CONSTANTS
 
-const max_rank = 10;
+const max_rank = 5;
 
 // DOCUMENT ELEMENTS
 const leaderboard_div = document.querySelector(".leaderboard");
+const date_span = document.querySelector(".date");
 
 // SHEETS VALUES
 const SHEET_ID = "1KJeXTxnx7_tO_tEq16EfAnXTgauHUAggwm5FqzPYczI";
@@ -70,14 +71,25 @@ async function getLeaderBoardUsers() {
     return top_five;
 }
 
+function displayDate() {
+    var d = new Date();
+    var curr_date = d.getDate();
+    var curr_month = d.getMonth() + 1; //Months are zero based
+    var curr_year = d.getFullYear();
+
+    date_text = `Date: ${curr_date}/${curr_month}/${curr_year}`;
+    date_span.textContent = date_text;
+}
+
 getLeaderBoardUsers().then((users) => {
     users.map((user) => {
         user_element = document.createElement("span");
         user_element.classList.add("leaderboard__row");
 
-        console.log(user);
-        user_element.innerHTML = `<p>#${user.rank}</p><p>${user.firstName} ${user.lastName}</p><p>${user.points}</p>`;
+        user_element.innerHTML = `<p>#${user.rank}</p><p>${user.firstName} ${user.lastName}</p><p class="point">${user.points}</p>`;
 
         leaderboard_div.appendChild(user_element);
     });
 });
+
+displayDate();

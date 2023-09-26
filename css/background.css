@@ -1,0 +1,56 @@
+.background-images {
+    z-index: -10;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.background-images .star-left-1 {
+    position: absolute;
+    top: 380px;
+    left: 10%;
+    width: 65px;
+}
+
+.background-images .star-left-2 {
+    position: absolute;
+    top: 330px;
+    left: 7%;
+    width: 50px;
+}
+
+.background-images .star-right-1 {
+    position: absolute;
+    top: 380px;
+    right: 10%;
+    width: 65px;
+}
+
+.background-images .star-right-2 {
+    position: absolute;
+    top: 330px;
+    right: 7%;
+    width: 50px;
+}
+
+.background-images .orange-circle-left {
+    position: absolute;
+    left: -300px;
+    top: -300px;
+    width: 600px;
+}
+
+.background-images .orange-circle-right {
+    position: absolute;
+    right: -300px;
+    top: -300px;
+    width: 600px;
+}
+
+.background-images .green-cicle {
+    position: absolute;
+    right: -400px;
+    bottom: -300px;
+    width: 800px;
+}
