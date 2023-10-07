@@ -9,7 +9,7 @@ const date_span = document.querySelector(".date");
 // SHEETS VALUES
 const SHEET_ID = "1KJeXTxnx7_tO_tEq16EfAnXTgauHUAggwm5FqzPYczI";
 const SHEET_TITLE = "2023 Term 4 - Hurlstone Tech Club Leaderboard";
-const SHEET_RANGE = "A1:D10";
+const SHEET_RANGE = "A1:D50";
 
 const FULL_URL =
     "https://docs.google.com/spreadsheets/d/" +
@@ -63,12 +63,12 @@ async function getLeaderBoardUsers() {
         }
     });
 
-    // ONLY GET THE TOP 5 USERS
-    top_five = sorted_array.filter((user) => {
+    // ONLY GET THE TOP USERS
+    top_users = sorted_array.filter((user) => {
         return user.rank <= max_rank;
     });
 
-    return top_five;
+    return top_users;
 }
 
 function displayDate() {
@@ -82,6 +82,7 @@ function displayDate() {
 }
 
 getLeaderBoardUsers().then((users) => {
+    console.log(users);
     users.map((user) => {
         user_element = document.createElement("span");
         user_element.classList.add("leaderboard__row");
