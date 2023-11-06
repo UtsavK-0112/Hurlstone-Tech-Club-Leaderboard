@@ -45,7 +45,11 @@ async function getLeaderBoardUsers() {
         } else if (userB.points > userA.points) {
             return 1;
         } else {
-            return 0;
+            if (userA.firstName < userB.firstName) {
+                return -1;
+            } else {
+                return 1;
+            }
         }
     });
 
