@@ -99,14 +99,14 @@
 
 /* Styling for top three users */
 
-.leaderboard__row:nth-of-type(2) .point {
+.leaderboard__row--first p:first-of-type {
     color: #ffd900;
 }
 
-.leaderboard__row:nth-of-type(3) .point {
+.leaderboard__row--second p:first-of-type {
     color: #adadad;
 }
 
-.leaderboard__row:nth-of-type(4) .point {
+.leaderboard__row--third p:first-of-type {
     color: #df8a1b;
 }

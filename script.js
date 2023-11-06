@@ -89,6 +89,14 @@ getLeaderBoardUsers().then((users) => {
 
         user_element.innerHTML = `<p>#${user.rank}</p><p>${user.firstName} ${user.lastName}</p><p class="point">${user.points}</p>`;
 
+        if (user.rank == 1) {
+            user_element.classList.add("leaderboard__row--first");
+        } else if (user.rank == 2) {
+            user_element.classList.add("leaderboard__row--second");
+        } else if (user.rank == 3) {
+            user_element.classList.add("leaderboard__row--third");
+        }
+
         leaderboard_div.appendChild(user_element);
     });
 });
