@@ -96,3 +96,17 @@
         font-size: 14px;
     }
 }
+
+/* Styling for top three users */
+
+.leaderboard__row:nth-of-type(2) .point {
+    color: #ffd900;
+}
+
+.leaderboard__row:nth-of-type(3) .point {
+    color: #adadad;
+}
+
+.leaderboard__row:nth-of-type(4) .point {
+    color: #df8a1b;
+}
