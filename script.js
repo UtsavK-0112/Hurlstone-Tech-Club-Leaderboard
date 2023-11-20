@@ -1,6 +1,6 @@
 // CONSTANTS
 
-const max_rank = 5;
+const max_rank = 7;
 
 // DOCUMENT ELEMENTS
 const leaderboard_div = document.querySelector(".leaderboard");
