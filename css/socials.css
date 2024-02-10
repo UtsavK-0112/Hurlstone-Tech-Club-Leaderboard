@@ -23,3 +23,12 @@
     color: #925e0f;
     text-align: center;
 }
+
+@media screen and (max-width: 600px) {
+    .socials img {
+        width: 60px;
+    }
+    .socials p {
+        font-size: 20px;
+    }
+}

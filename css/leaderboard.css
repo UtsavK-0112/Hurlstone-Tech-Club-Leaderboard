@@ -29,12 +29,6 @@
     display: inline;
 }
 
-@media screen and (max-width: 600px) {
-    .leaderboard__header p {
-        font-size: 14px;
-    }
-}
-
 .leaderboard__row {
     margin-inline: 3rem;
     display: flex;
@@ -66,8 +60,14 @@
 }
 
 @media screen and (max-width: 600px) {
-    .leaderboard__row p {
+    .leaderboard__row {
+        margin-inline: 1rem;
+    }
+    .leaderboard__header p {
         font-size: 14px;
+    }
+    .leaderboard__row p {
+        font-size: 11px;
     }
 }
 
