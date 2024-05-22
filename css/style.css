@@ -49,6 +49,12 @@ h1 {
     font-weight: 800;
 }
 
+.loading {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 32px;
+}
+
 @media screen and (max-width: 600px) {
     h1 {
         font-size: 30px;
@@ -64,5 +70,9 @@ h1 {
     .logo {
         width: 200px;
         margin-bottom: 0;
+    }
+
+    .loading img {
+        width: 128px;
     }
 }

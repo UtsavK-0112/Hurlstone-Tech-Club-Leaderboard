@@ -15,7 +15,7 @@ function displayDate() {
 fetch("https://tech-club-api.onrender.com/leaderboard-users")
     .then((response) => response.json())
     .then((users) => {
-        console.log(users);
+        document.querySelector(".loading").remove();
         users.map((user) => {
             user_element = document.createElement("span");
             user_element.classList.add("leaderboard__row");
